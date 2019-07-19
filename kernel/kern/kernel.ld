@@ -3,8 +3,9 @@ OUTPUT("kernel.elf")
 OUTPUT_ARCH("mips:isa32r2")
 OUTPUT_FORMAT("elf32-tradlittlemips")
 
-PROVIDE(SerialData = 0xBFD003F8);
-PROVIDE(SerialStat = 0xBFD003FC);
+PROVIDE(SerialRxData = 0xBFD00000);
+PROVIDE(SerialTxData = 0xBFD00004);
+PROVIDE(SerialStat = 0xBFD00008);
 
 /* Qemu serial constants */
 PROVIDE(COM1 = 0xBFD003F8);
